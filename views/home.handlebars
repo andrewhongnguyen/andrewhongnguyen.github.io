@@ -1,0 +1,198 @@
+<div>
+  <div id = "yooo">
+    <span id = "bold" class = "cBoxes">Watcha need?</span>
+    <input type="checkbox" id="weatherCheck">
+    <label class = "cBoxes" for="subscribeNews">Weather</label>
+    <input type="checkbox" id="stopwatchCheck">
+    <label class = "cBoxes" for="subscribeNews">Stopwatch</label>
+    <input type="checkbox" id="timerCheck">
+    <label class = "cBoxes" for="subscribeNews">Timer</label>
+    <input type="checkbox" id="rngCheck">
+    <label class = "cBoxes" for="subscribeNews">Random Number Generator</label>
+    <button class = "middle" onclick="getStuff()">Go!</button>
+  </div>
+
+  <div>
+
+  <div id = 'weather' class = "top">
+    <iframe style='display: block;' src='https://cdnres.willyweather.com/widget/loadView.html?id=78447' width='210' height='207' frameborder='0' scrolling='no'></iframe>
+  </div>
+
+  <div id='countdown' class = 'top'>
+    <div class='labels2'><div class = 'sep'>
+      <input class = 'test' id = 'days' value = 0><br>
+      <li>Days</li>
+    </div>
+    <div class = 'sep'>
+      <input class = 'test' id = 'hours' value = 0><br>
+      <li>Hours</li>
+    </div>
+      <div class = 'sep'>
+        <input class = 'test' id = 'minutes' value = 0><br>
+        <li>Minutes</li>
+      </div>
+      <div class = 'sep'>
+        <input class = 'test' id = 'seconds' value = 0><br>
+        <li>Seconds</li>
+      </div>
+    </div>
+    <div id='tiles'>
+      <span>00</span><span>00</span><span>00</span><span>00</span>
+    </div>
+    <div class='labels'>
+      <button id = 'startTimer' class = 'testButton' onclick='startTimer()'>Start</button>
+      <button id = 'resetTimer' class = 'testButton' onclick='resetTimer()'>Reset</button>
+    </div>
+  </div>
+
+  <div id = "stopwatch" class="stopwatch">
+    <div class="header">Stopwatch</div>
+    <div class="main-counter"></div>
+    <div class="controls">
+      <div class="pull-left">
+          <button class="btn btn-lap">Lap</button>
+          <button class="btn btn-reset">Reset</button>
+      </div>
+      <div class="pull-right">
+        <button class="btn btn-start">Start</button>
+        <button class="btn btn-stop">Stop</button>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div class="laps"></div>
+  </div>
+
+  <div id = "rng" class = "top">
+    <iframe src="https://www.random.org/widgets/integers/iframe.php?title=Random+Number+Generator&amp;buttontxt=Generate&amp;width=160&amp;height=200&amp;border=on&amp;bgcolor=%23FFFFFF&amp;txtcolor=%23777777&amp;altbgcolor=%23CCCCFF&amp;alttxtcolor=%23000000&amp;defaultmin=&amp;defaultmax=&amp;fixed=off" frameborder="0" width="160" height="200" scrolling="no">
+    </iframe>
+  </div>
+
+  </div>
+
+</div> 
+
+<script src="Stopwatch.js">
+</script>
+
+<script>
+        Stopwatch('.stopwatch');
+</script>
+
+<script>
+  var newHtml = ""
+  var target_date;
+  var days, hours, minutes, seconds; // variables for time units
+  var countdown = document.getElementById("tiles"); // get tag element
+  var startButton = document.getElementById("startTimer");
+  var dx = document.getElementById('days');
+  var hx = document.getElementById('hours');
+  var mx = document.getElementById('minutes');
+  var sx = document.getElementById('seconds');
+  var wc = document.getElementById('weatherCheck');
+  var sc = document.getElementById('stopwatchCheck');
+  var tc = document.getElementById('timerCheck');
+  var rc = document.getElementById('rngCheck');
+  var started = false;
+  var paused = false;
+  var x;
+  var seconds_left;
+  var true_seconds_left;
+  var flip = "Pause"
+
+  function getStuff(){
+    newHtml = "";
+    if(wc.checked){
+      document.getElementById("weather").style.visibility = "visible";
+    }
+    if(tc.checked){
+      document.getElementById("countdown").style.visibility = "visible";
+    }
+    if(rc.checked){
+      document.getElementById("rng").style.visibility = "visible";
+    }
+    if(sc.checked){
+      document.getElementById("stopwatch").style.visibility = "visible";
+    }
+    document.getElementById("yooo").style.visibility = "hidden";
+  }
+
+  function resetTimer(){
+    countdown.innerHTML = "<span>00</span><span>00</span><span>00</span><span>00</span>";
+    clearInterval(x)
+    started = false;
+    paused = false;
+    startButton.innerHTML = "<span>Start</span>";
+    document.getElementById("days").value = document.getElementById("hours").value = 0
+    document.getElementById("minutes").value = document.getElementById("seconds").value = 0
+  }
+
+  function startTimer(){
+    var d =  parseInt(dx.value)
+    var h = parseInt(hx.value)
+    var m = parseInt(mx.value)
+    var s = parseInt(sx.value)
+    
+    if(d + h + m + s == 0){
+      return;
+    }
+    
+    if(!started){
+      started = true;
+      startButton.innerHTML = "<span>" + flip + "</span>";
+    }
+    else{
+      if(paused){
+        flip = "Pause"
+        target_date = new Date().getTime() + true_seconds_left*1000;
+        x = setInterval(function () { getCountdown(); }, 1000);
+
+      }
+      else{
+        flip = "Resume"
+        clearInterval(x)
+
+      }
+      startButton.innerHTML = "<span>" + flip + "</span>";
+      paused = !paused
+      return;
+    }
+    
+    d *= 24*60*60*1000
+    h *= 60*60*1000
+    m *= 60*1000
+    s *= 1000
+
+    target_date = new Date().getTime() + d + h + m + s;
+
+    x = setInterval(function () { getCountdown(); }, 1000);
+  }
+
+
+function getCountdown(){
+  // find the amount of "seconds" between now and target
+  var current_date = new Date().getTime();
+  seconds_left = (target_date - current_date) / 1000;
+  true_seconds_left = seconds_left
+
+  if(Math.floor(seconds_left) == 0){
+    started = false;
+    clearInterval(x)
+  }
+  days = pad( parseInt(seconds_left / 86400) );
+  seconds_left = seconds_left % 86400;
+     
+  hours = pad( parseInt(seconds_left / 3600) );
+  seconds_left = seconds_left % 3600;
+      
+  minutes = pad( parseInt(seconds_left / 60) );
+  seconds = pad( parseInt( seconds_left % 60 ) );
+
+  // format countdown string + set tag value
+  countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+}
+
+function pad(n) {
+  return (n < 10 ? '0' : '') + n;
+}
+</script>

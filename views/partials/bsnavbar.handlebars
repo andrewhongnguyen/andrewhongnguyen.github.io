@@ -1,0 +1,40 @@
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/contact">Contact</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits">Credits</a></li>
+        <li class = "uh">
+        <select id = "bg">
+          <option value="river">River</option>
+          <option value="mountain">Mountains</option>
+          <option value="gundam">Gundam</option>
+        </select>
+        <button class = "middle" type = "button" onclick="updateBG()">Update</button>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
