@@ -34,8 +34,8 @@ app.use(function(err, req, res, next){
   next();
 });
 
-app.get('/views/about.html', function(req, res){
-  res.render('/views/about.html');
+app.get('/about.html', function(req, res){
+  res.render('/about.html');
 });
 
 app.get('/contact', function(req, res){
