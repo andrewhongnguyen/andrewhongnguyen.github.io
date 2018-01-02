@@ -112,12 +112,6 @@ var session = require('express-session');
 
 var parseurl = require('parseurl');
 
-app.use(session({
-  resave: false,
-  saveUninitialized: true,
-  secret: credentials.cookieSecret,
-}));
-
 app.use(function(req, res, next){
   var views = req.session.views;
 
