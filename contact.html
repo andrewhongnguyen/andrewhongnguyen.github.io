@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <!-- If IE use the latest rendering engine -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Set the page to the width of the device and set the zoom level -->
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <title>MyTools</title>
+</head>
+<body id = "fullPage" class = "entirePage">
+
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/contact.html">Contact</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
+        <li class = "uh">
+        <select id = "bg">
+          <option value="river">River</option>
+          <option value="mountain">Mountains</option>
+          <option value="gundam">Gundam</option>
+        </select>
+        <button class = "middle" type = "button" onclick="updateBG()">Update</button>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="main.css"/>
+
+<div>
+<div class="hmu">
+  <form class="formContactUs" role="form" action="/process?form=contactus" method="POST">
+  <h4 class = "contactTitle">Need to contact me?</h4>
+    <div class="blockRight">
+      <label for="fieldSubject" class="sep">Subject</label>
+      <div class="sep">
+        <input type="text" class="inputFields" id="fieldSubject" name="subject">
+      </div>
+    </div> <!-- End of form-group -->
+
+    <div class="blockRight">
+      <label for="fieldQues" class = "sepTop">Message</label>
+      <div class = "sep">
+        <textarea rows = "7" cols = "36" class = "nahBigger" id="fieldQues" name="ques"> </textarea>
+      </div>
+    </div> <!-- End of form-group -->
+
+    <div class="blockRight">
+      <label for="fieldEmail" class="sep">Email</label>
+      <div class="sep">
+        <input type="text" class="inputFields" id="fieldEmail" name="email">
+      </div>
+    </div> <!-- End of form-group -->
+
+    <div class="sep">
+      <div>
+        <button type="submit" id = "somePadding" class="btn btn-default">Submit</button>
+      </div>
+    </div> <!-- End of form-group -->
+
+  </form>
+
+
+</div> <!-- End of contactUs -->
+
+
+
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -112,20 +112,6 @@ var session = require('express-session');
 
 var parseurl = require('parseurl');
 
-app.use(function(req, res, next){
-  var views = req.session.views;
-
-  if(!views){
-    views = req.session.views = {};
-  }
-
-  var pathname = parseurl(req).pathname;
-
-  views[pathname] = (views[pathname] || 0) + 1;
-
-  next();
-
-});
 
 app.get('/viewcount', function(req, res, next){
   res.send('You viewed this page ' + req.session.views['/viewcount'] + ' times');
