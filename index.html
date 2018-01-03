@@ -26,30 +26,11 @@
 </nav>
 </div>
 
-<script>
-function updateBG(){
-  val = document.getElementById('bg').value;
-  page = document.getElementById('fullPage');
-
-  if(val == "river"){
-    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
-  }
-  else if(val == "mountain"){
-    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
-  }
-  else{
-    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
-  }
-
-}
-</script>
-
-
 <link rel="stylesheet" type="text/css" href="main.css"/>
 
 <div>
   <div id = "yooo">
-    <span id = "bold" class = "cBoxes">Watcha need?</span>
+    <span id = "bold" class = "cBoxes">Need anything?</span>
     <input type="checkbox" id="weatherCheck">
     <label class = "cBoxes" for="subscribeNews">Weather</label>
     <input type="checkbox" id="stopwatchCheck">
