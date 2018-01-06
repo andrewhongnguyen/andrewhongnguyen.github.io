@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <title>MyTools</title>
+</head>
+<body id = "fullPage" class = "entirePage">
+
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="main.css"/>
+
+<div>
+
+<div class="poem">
+ 	<div class="poemTitle">To my future wife
+ 		<i class="poemAuthor">by Andrew Nguyen</i>
+ 	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">I can’t wait to share my dreams and aspirations with you</div>
+	  	<div class="poemLine">To make our dreams and aspirations old memories </div>
+	  	<div class="poemLine">To taste what the world has to offer with you</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Let’s fly and travel</div>
+	  	<div class="poemLine">Let’s jump out of a plane</div>
+	  	<div class="poemLine">Let’s play in an amusement park we can’t pronounce the name of</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">I can’t wait to attend our own wedding</div>
+	  	<div class="poemLine">To have our friends and family watch us </div>
+	  	<div class="poemLine">Close one chapter and open another </div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">I can’t wait to refer to you as my wife</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">I can’t wait to hold our own children</div>
+	  	<div class="poemLine">To feel a love only a parent could</div>
+	  	<div class="poemLine">To impart our knowledge to them </div>
+	  	<div class="poemLine">To raise them to be kind-hearted and compassionate</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">I can’t wait to grow old with you</div>
+	  	<div class="poemLine">To become grandparents</div>
+	  	<div class="poemLine">To enjoy the radiance of newborns all over again</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">I can’t wait to live away our days</div>
+		<div class="poemLine">To laugh, eat, and sleep with you</div>
+	  	<div class="poemLine">To live with only a single care in the world for each other </div>
+	  	<div class="poemLine">To smile on my last day on Earth</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">When I pass away, I hope you don’t cry too much</div>
+	  	<div class="poemLine">I hope you don’t forget to smile</div>
+	  	<div class="poemLine">I hope our friends and family console you well</div>
+	  	<div class="poemLine">I hope you remember that I would only want you to be happy</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">When I return to our house in a jar</div>
+	  	<div class="poemLine">I hope you don’t join me too quickly</div>
+	  	<div class="poemLine">But when you do, I can’t wait for our ashes to mix indifferently </div>
+	  	<div class="poemLine">So I can feel the warmth of your arms once more </div>
+	  	<div class="poemLine">But this time, I won’t let go. </div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">But first, I can’t wait to meet you.</div>
+	</div>
+</div>
+
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

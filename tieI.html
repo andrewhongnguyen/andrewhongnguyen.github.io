@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <title>MyTools</title>
+</head>
+<body id = "fullPage" class = "entirePage">
+
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="main.css"/>
+
+<div>
+
+<div class="poem">
+ 	<div class="poemTitle">Tie I
+ 		<i class="poemAuthor">by Andrew Nguyen</i>
+ 	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">With so many close ties</div>
+	  	<div class="poemLine">It’s impossible to keep </div>
+	  	<div class="poemLine">All of your close ties tight</div>
+	  	<div class="poemLine">As more ties become tied</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">In this ocean of rope</div>
+	  	<div class="poemLine">It’s easy</div>
+	  	<div class="poemLine">For ties to tangle, </div>
+	  	<div class="poemLine">For ties to loosen,</div>
+	  	<div class="poemLine">For ties to become lost in the vastness</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Especially if</div>
+	  	<div class="poemLine">The rope is long</div>
+	  	<div class="poemLine">The distance is hard to make up for</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Dear friend,</div>
+	  	<div class="poemLine">Just because our ties have loosened</div>
+	  	<div class="poemLine">It doesn’t mean that</div>
+	  	<div class="poemLine">Our ties are any less precious to me</div>
+
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">I may lose sight of our ties</div>
+	  	<div class="poemLine">But as long as the rope is still there</div>
+	  	<div class="poemLine">If the distance is ever closed</div>
+	  	<div class="poemLine">I hope our ends meet again</div>
+	  	<div class="poemLine">So we can tighten our knot</div>
+	</div>
+
+</div>
+
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

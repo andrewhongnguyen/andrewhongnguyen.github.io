@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <title>MyTools</title>
+</head>
+<body id = "fullPage" class = "entirePage">
+
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="main.css"/>
+
+<div>
+
+<div class="poem">
+ 	<div class="poemTitle">Beauty
+ 		<i class="poemAuthor">by Andrew Nguyen</i>
+ 	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">A universal understanding of what beauty is </div>
+	  <div class="poemLine">Is as ambiguous as water.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">If beauty is defined as the content of one’s character,</div>
+	  	<div class="poemLine">Then water is a vast cyan body that kisses the sun twice a day.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">If beauty is simply a checklist of physical appearances,</div>
+	  <div class="poemLine">Then water is a shallow pool.</div>
+	  <div class="poemLine">It’s easy to dive incorrectly into the dating game </div>
+	  <div class="poemLine">And break your neck.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">But if your beauty is like an ocean,</div>
+	  <div class="poemLine">Then dating would be like deep sea excavations.</div>
+	  <div class="poemLine">Every new fish would be a new adventure </div>
+	  <div class="poemLine">It wouldn’t be hard finding other fish in this sea,</div>
+	  <div class="poemLine">If your eyes can truly sea beauty.</div>
+	</div>
+</div>
+
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

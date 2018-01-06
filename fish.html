@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <title>MyTools</title>
+</head>
+<body id = "fullPage" class = "entirePage">
+
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="main.css"/>
+
+<div>
+
+<div class="poem">
+ 	<div class="poemTitle">Fish
+ 		<i class="poemAuthor">by Andrew Nguyen</i>
+ 	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">A relationship is a funny thing</div>
+	  	<div class="poemLine">Because your significant other</div>
+	  	<div class="poemLine">can leave significant pain.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Granted, there are many other fish in the sea</div>
+	  	<div class="poemLine">So If I'm having trouble reeling this one in</div>
+	  	<div class="poemLine">Why not just cut the line, and try for another?</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">What If I end up with a better fish?</div>
+	  	<div class="poemLine">A fish that won’t fight with me as much,</div>
+	  	<div class="poemLine">A fish that'll acknowledges that I'm not perfect</div>
+	  	<div class="poemLine">But would treat me as if I am.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">But who says I want to gamble for another fish,</div>
+	  	<div class="poemLine">Who says I don't want to continue fighting for this one,</div>
+	  	<div class="poemLine">Who says the countless arguments</div>
+	  	<div class="poemLine">Between self-satisfaction and empathy</div>
+	  	<div class="poemLine">Isn't worth it?</div>
+	</div>
+
+</div>
+
+</div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

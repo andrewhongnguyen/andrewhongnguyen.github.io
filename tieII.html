@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <title>MyTools</title>
+</head>
+<body id = "fullPage" class = "entirePage">
+
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="main.css"/>
+
+<div>
+
+<div class="poem">
+ 	<div class="poemTitle">Tie II
+ 		<i class="poemAuthor">by Andrew Nguyen</i>
+ 	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Boys seem to like to claim</div>
+	  	<div class="poemLine">That women tie them down.</div>
+	  	<div class="poemLine">As if having close ties </div>
+	  	<div class="poemLine">With someone is such a bad thing. </div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">However there’s a difference</div>
+	  	<div class="poemLine">Between Boys and Men. </div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Boys wear </div>
+	  	<div class="poemLine">White t-shirts,</div>
+	  	<div class="poemLine">Cargo pants,</div>
+	  	<div class="poemLine">And sneakers.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Men wear </div>
+	  	<div class="poemLine">Dress shoes,</div>
+	  	<div class="poemLine">Dress pants,</div>
+	  	<div class="poemLine">And a dress shirt</div>
+	  	<div class="poemLine">Strangled in a clean tie.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">When shoelaces become loose</div>
+	  	<div class="poemLine">Boys are too selfish</div>
+	  	<div class="poemLine">To tend to the knot. </div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">When ties become loose</div>
+	  	<div class="poemLine">Men simply </div>
+	  	<div class="poemLine">Straighten out the knot.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Boys</div>
+	  	<div class="poemLine">Tend to loosen their knots</div>
+	  	<div class="poemLine">As soon as they’re ‘tied down’ </div>
+	  	<div class="poemLine">And just as quickly</div>
+	  	<div class="poemLine">Tie another knot</div>
+	  	<div class="poemLine">With someone else</div>
+	  	<div class="poemLine">Not too far away. </div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">You see,</div>
+	  	<div class="poemLine">Boys have a </div>
+	  	<div class="poemLine">Commitment problem.</div>
+	  	<div class="poemLine">Men</div>
+	  	<div class="poemLine">Do Knot. </div>
+	</div>
+</div>
+
+</div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

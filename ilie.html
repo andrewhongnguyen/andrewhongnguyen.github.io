@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <title>MyTools</title>
+</head>
+<body id = "fullPage" class = "entirePage">
+
+<div class="container">
+  <nav class="navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="main.css"/>
+
+<div>
+
+<div class="poem">
+ 	<div class="poemTitle">I Lie
+ 		<i class="poemAuthor">by Andrew Nguyen</i>
+ 	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">Minty breeze,</div>
+	  	<div class="poemLine">Your children Aura and Pontus</div>
+	  	<div class="poemLine">Drift and play nearby.</div>
+	  	<div class="poemLine">Without shoes and socks</div>
+	  	<div class="poemLine">Grass crinkle under my toes and her’s.</div>
+	  	<div class="poemLine">How vast and heavenly </div>
+	 	<div class="poemLine">The sky is</div>
+	  	<div class="poemLine">Is unbelievable. </div>
+	  	<div class="poemLine">Laughing,</div>
+	  	<div class="poemLine">On the ground next to her</div>
+	  	<div class="poemLine">I lie.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">After the sun walks home</div>
+	  	<div class="poemLine">The darkened world </div>
+	  	<div class="poemLine">Basks in moonlight and stars.</div>
+	  	<div class="poemLine">We embrace the chilled crisp air,</div>
+	  	<div class="poemLine">Our eyelids stumble and falls.</div>
+	  	<div class="poemLine">Beside your beauty, I wrap my arms around myself</div>
+	  	<div class="poemLine">in your bed</div>
+	  	<div class="poemLine">I lie.</div>
+	</div>
+
+	<div class = "stanza">
+		<div class="poemLine">However,</div>
+	  	<div class="poemLine">Man tore down your wooden bed frame</div>
+	  	<div class="poemLine">To make space for his suburban cities.</div>
+	  	<div class="poemLine">Now he pollutes the sky with smog</div>
+	  	<div class="poemLine">And the ocean with his selfishness. </div>
+	  	<div class="poemLine">On behalf of Man,</div>
+	  	<div class="poemLine">I’m sorry, Gaia. </div>
+	  	<div class="poemLine">“He’ll return your home someday”</div>
+	  	<div class="poemLine">with a smile next to your side</div>
+	  	<div class="poemLine">I lie.</div>
+	</div>
+</div>
+
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
