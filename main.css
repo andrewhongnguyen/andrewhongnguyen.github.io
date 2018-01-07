@@ -3,6 +3,16 @@ body {
 	height: 100%;
 	text-align: center;
 }
+.collapse{
+    display: block!important;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+    width: auto;
+    border-top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 #padLeaders{
   height: 20px,
 }
@@ -186,12 +196,15 @@ body {
 }
 
 #yooo {
-  height: 60px;
-  width: 50%;
-  text-align: center;
   margin: auto;
   margin-top: 100px;
   padding: 15px;
+
+  display: block!important;
+  height: auto!important;
+  overflow: visible!important;
+  width: auto;
+
   border: 1px solid #000;
   border-radius: 5px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
