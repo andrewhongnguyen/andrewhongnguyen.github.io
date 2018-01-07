@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-  <!-- If IE use the latest rendering engine -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Set the page to the width of the device and set the zoom level -->
-  <meta name="viewport" content="width = device-width, initial-scale = 1">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <title>Andrew Hong Nguyen</title>
+  <meta charset="UTF-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <title>MyTools</title>
 </head>
 <body id = "fullPage" class = "entirePage">
- 
+
 <div class="container">
   <nav class="navbar-default">
   <div class="container-fluid">
     <div class="collapse">
-      <ul class="nav navbar-nav"> 
+      <ul class="nav navbar-nav">
         <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
         <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
         <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
@@ -27,12 +28,31 @@
 </nav>
 </div>
 
+<script>
+function updateBG(){
+  val = document.getElementById('bg').value;
+  page = document.getElementById('fullPage');
+
+  if(val == "river"){
+    page.style.backgroundImage = "url('/public/img/River.jpg')"; 
+  }
+  else if(val == "mountain"){
+    page.style.backgroundImage = "url('/public/img/mountains.jpg')"; 
+  }
+  else{
+    page.style.backgroundImage = "url('/public/img/gundam.jpg')";
+  }
+
+}
+</script>
+
+
 <link rel="stylesheet" type="text/css" href="main.css"/>
 
 <div>
-  <div class = "container">
+<div class ="container">
   <div id = "yooo">
-    <span id = "bold" class = "cBoxes">Need anything?</span>
+    <span id = "bold" class = "cBoxes">Watcha need?</span>
     <input type="checkbox" id="weatherCheck">
     <label class = "cBoxes" for="subscribeNews">Weather</label>
     <input type="checkbox" id="stopwatchCheck">
@@ -43,7 +63,6 @@
     <label class = "cBoxes" for="subscribeNews">Random Number Generator</label>
     <button class = "middle" onclick="getStuff()">Go!</button>
   </div>
-</div>
 
   <div>
 
@@ -104,6 +123,7 @@
   </div>
 
 </div> 
+</div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -234,4 +254,3 @@ function pad(n) {
 }
 </script>
 </html>
-
