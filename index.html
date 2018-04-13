@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <!-- If IE use the latest rendering engine -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Set the page to the width of the device and set the zoom level -->
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<meta charset="UTF-8">
+  <!-- If IE use the latest rendering engine -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Set the page to the width of the device and set the zoom level -->
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-  <title>Andrew Hong Nguyen</title>
+  <title>About</title>
 </head>
 <body id = "fullPage" class = "entirePage">
 
@@ -18,8 +18,8 @@
   <div class="container-fluid">
     <div class="collapse">
       <ul class="nav navbar-nav">
-        <li class = "headerBtn"><a style = "color: #fff" href="/">Home</a></li>
-        <li class = "headerBtn"><a style = "color: #fff" href="/about.html">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/">About</a></li>
+        <li class = "headerBtn"><a style = "color: #fff" href="/tools.html">Tools</a></li>
         <li class = "headerBtn"><a style = "color: #fff" href="/poems.html">Poems</a></li>
         <li class = "headerBtn"><a style = "color: #fff" href="/credits.html">Credits</a></li>
       </ul>
@@ -50,207 +50,42 @@ function updateBG(){
 <link rel="stylesheet" type="text/css" href="main.css"/>
 
 <div>
-<div class ="container">
-  <div id = "yooo">
-    <span id = "bold" class = "cBoxes">Watcha need?</span>
-    <input type="checkbox" id="weatherCheck">
-    <label class = "cBoxes" for="subscribeNews">Weather</label>
-    <input type="checkbox" id="stopwatchCheck">
-    <label class = "cBoxes" for="subscribeNews">Stopwatch</label>
-    <input type="checkbox" id="timerCheck">
-    <label class = "cBoxes" for="subscribeNews">Timer</label>
-    <input type="checkbox" id="rngCheck">
-    <label class = "cBoxes" for="subscribeNews">Random Number Generator</label>
-    <button class = "middle" onclick="getStuff()">Go!</button>
+
+<div class="about">
+  <div class = "picMe">
   </div>
+  <a href="/public/Resume.pdf" download>
+      <p>Resume</p>
+  </a>
+  <p class = "left">Hi, I’m Andrew Nguyen. I study math and computer science at UCSD. I’m currently looking for a full-time opportunity starting July of 2018, so if you’d like to interview me feel free to reach out to me at <span style = "color:#15c">andrewhongnguyen@gmail.com</span>
+  </p>
 
-  <div>
+  <p class = "left">What are your favorite animes?
+    <i class = "sep">Mobile Suit Gundam Iron-Blooded Orphans, Boku no Hero Academia, Hunter × Hunter.</i>
+  </p>
 
-  <div id = 'weather' class = "top">
-    <iframe style='display: block;' src='https://cdnres.willyweather.com/widget/loadView.html?id=78447' width='210' height='207' frameborder='0' scrolling='no'></iframe>
-  </div>
+  <p class = "left">How would you describe yourself in one word?
+    <span class = "block">Objective</span>
+  </p>
 
-  <div id='countdown' class = 'top'>
-    <div class='labels2'><div class = 'sep'>
-      <input class = 'test' id = 'days' value = 0><br>
-      <li>Days</li>
+  <span class = "left">What games are you playing?
+    <div class = "sep">
+    <div class = "left2">
+      <span class = "block">Puzzles and Dragons: I run the following leaders</span>
+      <span class = "block"> Yooo feel free to add me. 359,525,393 </span>
     </div>
-    <div class = 'sep'>
-      <input class = 'test' id = 'hours' value = 0><br>
-      <li>Hours</li>
+    
+    <img style="display:inline" src="/public/img/padleaders.jpg" width="210" height="70">
     </div>
-      <div class = 'sep'>
-        <input class = 'test' id = 'minutes' value = 0><br>
-        <li>Minutes</li>
-      </div>
-      <div class = 'sep'>
-        <input class = 'test' id = 'seconds' value = 0><br>
-        <li>Seconds</li>
-      </div>
-    </div>
-    <div id='tiles'>
-      <span>00</span><span>00</span><span>00</span><span>00</span>
-    </div>
-    <div class='labels'>
-      <button id = 'startTimer' class = 'testButton' onclick='startTimer()'>Start</button>
-      <button id = 'resetTimer' class = 'testButton' onclick='resetTimer()'>Reset</button>
-    </div>
-  </div>
+  </span>
 
-  <div id = "stopwatch" class="stopwatch">
-    <div class="header">Stopwatch</div>
-    <div class="main-counter"></div>
-    <div class="controls">
-      <div class="pull-left">
-          <button class="btn btn-lap">Lap</button>
-          <button class="btn btn-reset">Reset</button>
-      </div>
-      <div class="pull-right">
-        <button class="btn btn-start">Start</button>
-        <button class="btn btn-stop">Stop</button>
-      </div>
-      <div class="clear"></div>
-    </div>
+</div>
 
-    <div class="laps"></div>
-  </div>
 
-  <div id = "rng" class = "top">
-    <iframe src="https://www.random.org/widgets/integers/iframe.php?title=Random+Number+Generator&amp;buttontxt=Generate&amp;width=160&amp;height=200&amp;border=on&amp;bgcolor=%23FFFFFF&amp;txtcolor=%23777777&amp;altbgcolor=%23CCCCFF&amp;alttxtcolor=%23000000&amp;defaultmin=&amp;defaultmax=&amp;fixed=off" frameborder="0" width="160" height="200" scrolling="no">
-    </iframe>
-  </div>
 
-  </div>
-
-</div> 
 </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </body>
-
-<script src="Stopwatch.js">
-</script>
-
-<script>
-        Stopwatch('.stopwatch');
-</script>
-
-<script>
-  var newHtml = ""
-  var target_date;
-  var days, hours, minutes, seconds; // variables for time units
-  var countdown = document.getElementById("tiles"); // get tag element
-  var startButton = document.getElementById("startTimer");
-  var dx = document.getElementById('days');
-  var hx = document.getElementById('hours');
-  var mx = document.getElementById('minutes');
-  var sx = document.getElementById('seconds');
-  var wc = document.getElementById('weatherCheck');
-  var sc = document.getElementById('stopwatchCheck');
-  var tc = document.getElementById('timerCheck');
-  var rc = document.getElementById('rngCheck');
-  var started = false;
-  var paused = false;
-  var x;
-  var seconds_left;
-  var true_seconds_left;
-  var flip = "Pause"
-
-  function getStuff(){
-    newHtml = "";
-    if(wc.checked){
-      document.getElementById("weather").style.visibility = "visible";
-    }
-    if(tc.checked){
-      document.getElementById("countdown").style.visibility = "visible";
-    }
-    if(rc.checked){
-      document.getElementById("rng").style.visibility = "visible";
-    }
-    if(sc.checked){
-      document.getElementById("stopwatch").style.visibility = "visible";
-    }
-    document.getElementById("yooo").style.visibility = "hidden";
-  }
-
-  function resetTimer(){
-    countdown.innerHTML = "<span>00</span><span>00</span><span>00</span><span>00</span>";
-    clearInterval(x)
-    started = false;
-    paused = false;
-    startButton.innerHTML = "<span>Start</span>";
-    document.getElementById("days").value = document.getElementById("hours").value = 0
-    document.getElementById("minutes").value = document.getElementById("seconds").value = 0
-  }
-
-  function startTimer(){
-    var d =  parseInt(dx.value)
-    var h = parseInt(hx.value)
-    var m = parseInt(mx.value)
-    var s = parseInt(sx.value)
-    
-    if(d + h + m + s == 0){
-      return;
-    }
-    
-    if(!started){
-      started = true;
-      startButton.innerHTML = "<span>" + flip + "</span>";
-    }
-    else{
-      if(paused){
-        flip = "Pause"
-        target_date = new Date().getTime() + true_seconds_left*1000;
-        x = setInterval(function () { getCountdown(); }, 1000);
-
-      }
-      else{
-        flip = "Resume"
-        clearInterval(x)
-
-      }
-      startButton.innerHTML = "<span>" + flip + "</span>";
-      paused = !paused
-      return;
-    }
-    
-    d *= 24*60*60*1000
-    h *= 60*60*1000
-    m *= 60*1000
-    s *= 1000
-
-    target_date = new Date().getTime() + d + h + m + s;
-
-    x = setInterval(function () { getCountdown(); }, 1000);
-  }
-
-
-function getCountdown(){
-  // find the amount of "seconds" between now and target
-  var current_date = new Date().getTime();
-  seconds_left = (target_date - current_date) / 1000;
-  true_seconds_left = seconds_left
-
-  if(Math.floor(seconds_left) == 0){
-    started = false;
-    clearInterval(x)
-  }
-  days = pad( parseInt(seconds_left / 86400) );
-  seconds_left = seconds_left % 86400;
-     
-  hours = pad( parseInt(seconds_left / 3600) );
-  seconds_left = seconds_left % 3600;
-      
-  minutes = pad( parseInt(seconds_left / 60) );
-  seconds = pad( parseInt( seconds_left % 60 ) );
-
-  // format countdown string + set tag value
-  countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
-}
-
-function pad(n) {
-  return (n < 10 ? '0' : '') + n;
-}
-</script>
 </html>
