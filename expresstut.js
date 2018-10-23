@@ -13,8 +13,8 @@ app.use(require('body-parser').urlencoded({extended: true}));
 
 var formidable = require('formidable');
 
-var credentials = require('./credentials.js');
-app.use(require('cookie-parser')(credentials.cookieSecret));
+//var credentials = require('./credentials.js');
+//app.use(require('cookie-parser')(credentials.cookieSecret));
 
 app.set('port', process.env.PORT || 3000);
 

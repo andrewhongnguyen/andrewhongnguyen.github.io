@@ -2,7 +2,6 @@
   "name": "expresstut",
   "version": "1.0.0",
   "private": true,
-  "description": "",
   "main": "expresstut.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +11,7 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "cookie-parser": "^1.4.3",
-    "express": "^4.13.3",
+    "express": "^4.16.4",
     "express-handlebars": "^2.0.1",
     "express-session": "^1.15.6",
     "formidable": "^1.1.1",
@@ -22,5 +21,15 @@
     "nodemailer": "^4.4.1",
     "nodemailer-smtp-transport": "^2.7.4",
     "parseurl": "^1.3.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewhongnguyen/andrewhongnguyen.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewhongnguyen/andrewhongnguyen.github.io/issues"
+  },
+  "homepage": "https://github.com/andrewhongnguyen/andrewhongnguyen.github.io#readme",
+  "description": ""
 }
